@@ -20,10 +20,16 @@ function App() {
 
   function toggleButtonActivite() {
     setShowActivite(!showActivite);
+    if (showPropose) {
+      setShowPropose(false);
+    }
   }
 
   function toggleButtonPropose() {
     setShowPropose(!showPropose);
+    if (showActivite) {
+      setShowActivite(false);
+    }
   }
 
   return (
