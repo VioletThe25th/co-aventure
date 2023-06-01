@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 const activite = [
   { id: 1, label: 'Atelier créatif', price: 35 },
@@ -37,18 +37,10 @@ const geo = [
     {id: 20, label: 'Corse'},
 ]
 
-function Activite(props) {
+function Activite() {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [numberOfPeople, setNumberOfPeople] = useState(1);
   const [selectedGeo, setSelectedGeo] = useState([]);
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  useEffect(() => {
-    const newTotalPrice = calculateTotalPrice();
-    setTotalPrice(newTotalPrice);
-    console.log("Activite", newTotalPrice);
-    props.onTotalPriceChange(newTotalPrice);
-  }, [props.selectedOptions, props.numberOfPeople]);
 
   const handleOptionChange = (e) => {
     const selectedIds = Array.from(e.target.selectedOptions).map((option) => parseInt(option.value));
