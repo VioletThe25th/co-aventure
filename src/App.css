@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+.parent {
+  position: relative;
+}
+
+.parent Activite:last-child + .button {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
