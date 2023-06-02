@@ -47,8 +47,10 @@ function App() {
           {componentActivite.map((item, i) => (
           <Activite key={i} text={item}/>
         ))}
-        <div className='px-8 mt-2 '>
-          <ButtonPlus onClick={addComponentActivite} text="+" className="button" />
+        <div className='px-8 mt-2'>
+          <div className='w-10 bg-slate-200 rounded-full flex justify-center hover:bg-slate-400'>
+            <ButtonPlus onClick={addComponentActivite} text="+" className="button" />
+          </div>
         </div>
       </div>}
         <div>
@@ -57,7 +59,9 @@ function App() {
           <Propose key={i} text={item}/>
         ))}
         <div className='px-8 mt-2 '>
-          <ButtonPlus onClick={addComponentPropose} text="+" className="button" />
+          <div className='w-10 bg-slate-200 rounded-full flex justify-center hover:bg-slate-400'>
+            <ButtonPlus onClick={addComponentPropose} text="+" className="button" />
+          </div>
         </div>
       </div>}
         </div>
